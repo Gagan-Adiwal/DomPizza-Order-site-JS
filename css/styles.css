@@ -1,0 +1,546 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fdfdfd;
+}
+
+/* Navbar */
+nav {
+    background: #e31837;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* === HOME PAGE OFFERS COUPONS === */
+.offers {
+    background: #fff5f7;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.offers h1 {
+    font-size: 2rem;
+    color: #e31837;
+    margin-bottom: 10px;
+}
+
+.offers p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.coupon-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.coupon {
+    background: #e31837;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: transform 0.3s;
+    min-width: 200px;
+}
+
+.coupon:hover {
+    transform: scale(1.05);
+}
+
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 95%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.slides {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    flex: 0 0 calc(33.33% - 10px);
+    /* show 3 images */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .slides img {
+        flex: 0 0 calc(50% - 10px);
+        /* show 2 images on tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .slides img {
+        flex: 0 0 100%;
+        /* show 1 image on mobile */
+    }
+}
+
+
+/* Categories */
+.categories {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.category img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #e31837;
+}
+
+.category:hover {
+    transform: scale(1.1);
+}
+
+.category span {
+    font-weight: bold;
+}
+
+
+/* Bestsellers Section */
+.bestsellers {
+    background: #fff8f0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.bestsellers h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.bestsellers .locality {
+    color: #b8860b;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.bestseller-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.bestseller-slider::-webkit-scrollbar {
+    display: none;
+    /* hide scrollbar */
+}
+
+.bestseller-card {
+    flex: 0 0 250px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.bestseller-card:hover {
+    transform: translateY(-5px);
+}
+
+.bestseller-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #e31837;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.add-btn {
+    background: #e31837;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #b3132b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bestseller-card {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .bestseller-card {
+        flex: 0 0 160px;
+    }
+
+    .bestsellers h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Navbar */
+@media(max-width:768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background: #e31837;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Navbar */
+@media(max-width:768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background: #e31837;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* === OFFERS PAGE (Dedicated Page) === */
+.offers-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.offers-page .offer-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offers-page .offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.offers-page .offer-card h2 {
+    color: #e91e63;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.offers-page .offer-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.offers-page .offer-card span {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* === MENU PAGE === */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-card h2 {
+    margin: 12px 15px 5px;
+    color: #ff9800;
+    font-size: 1.2rem;
+}
+
+.menu-card p {
+    margin: 0 15px 15px;
+    color: #555;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* === RESPONSIVE FIXES === */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .offer-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .menu-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .offers, .menu {
+        gap: 15px;
+    }
+
+    .offer-card, .menu-card {
+        padding: 15px;
+    }
+
+    .menu-card img {
+        height: 130px;
+    }
+}
+
+/*------------------ Location Access Page------------------------*/
+
+/* 🌍 Location Page Styles */
+header h1 {
+  font-size: 2rem;
+  color: #e31837;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#map {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#status {
+  font-size: 1rem;
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+
+  #map {
+    height: 350px;
+  }
+
+  #status {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  #map {
+    height: 250px;
+    border-radius: 8px;
+  }
+
+  #status {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+}

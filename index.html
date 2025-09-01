@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodiePizza - Order Online</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">DOMPizza</div>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="location.html">Location Access</a></li>
+        </ul>
+    </nav>
+
+    <section class="offers">
+        <h1>Exclusive Coupons</h1>
+        <p>Grab the best deals available</p>
+        <div class="coupon-cards">
+            <div class="coupon">GET50 - 50% OFF</div>
+            <div class="coupon">PIZZA30 - 30% OFF</div>
+            <div class="coupon">BURGER20 - 20% OFF</div>
+        </div>
+    </section>
+
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Sunday_Special_offers_AC_202410201729399304_202410211729485978_202410221729573259_202411201732090902_202412261735198159_202503181742280842_202503181742280870.jpg?ver=0.0.1"
+                alt="Pizza Offer">
+            <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Dominos_Cheese-Burst-AC_202410241729754536.JPG?ver=0.0.1"
+                alt="Cheese Burst Pizza">
+            <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Domino%2527s_cheese-volcano-revamp_AC_202409301727679855_202411081731063825.jpg?ver=0.0.1"
+                alt="Pizza Volcano">
+            <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/Chocolava_KV_App_Carousel_400x220px_202409301727679882_202410011727758996_202410011727766705_202410091728451033_202410151728996299_202410161729071005_202410241729754696_202411071730957121_202503181742281735_202503191742361186.jpg?ver=0.0.1"
+                alt="Choco Lava">
+            <img src="https://api.dominos.co.in/prod-olo-api/images/dynamicOffers/cheese_rewards_corousal_202210201666257463_202503181742281667.jpg?ver=0.0.1"
+                alt="Combo Pack">
+        </div>
+        <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+        <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>What are you craving?</h2>
+        <div class="category-list">
+            <div class="category">
+                <img src="images/pizza1.png" alt="Big Pizza">
+                <span>Big Pizza</span>
+            </div>
+            <div class="category">
+                <img src="images/pizza2.jpg" alt="Cheese Burst">
+                <span>Cheese Burst</span>
+            </div>
+            <div class="category">
+                <img src="images/garlicbread.jpg" alt="Garlic Bread">
+                <span>Garlic Bread</span>
+            </div>
+            <div class="category">
+                <img src="images/pizza5.png" alt="Desserts">
+                <span>Desserts</span>
+            </div>
+            <div class="category">
+                <img src="images/coldrink.jpeg" alt="Cold Drinks">
+                <span>Cold Drinks</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top 10 Bestsellers Section -->
+    <section class="bestsellers">
+        <h2><span class="crown">👑</span> Top 10 Bestsellers</h2>
+        <p class="locality">📍 In Your Locality</p>
+
+        <div class="bestseller-slider">
+            <div class="bestseller-card">
+                <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/05e8ba85-4444-4c19-b085-8012f1baf0b4_margherita_side.webp?ver=V0.0.1"
+                    alt="Margherita">
+                <div class="card-content">
+                    <h3>Margherita</h3>
+                    <p>Classic delight with 100% real mozzarella cheese.</p>
+                    <div class="price">₹109</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <div class="bestseller-card">
+                <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a52b70f2-01cb-42b8-ae4f-566df999115c_farmhouse_side.webp?ver=V0.0.1"
+                    alt="Farmhouse">
+                <div class="card-content">
+                    <h3>Farmhouse</h3>
+                    <p>Delightful combo of onion, capsicum, tomato & mushrooms.</p>
+                    <div class="price">₹259</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <div class="bestseller-card">
+                <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/ff2e39b8-87cc-4f3f-a2f5-06198a85f3df_peppy_paneer_side.webp?ver=V0.0.1"
+                    alt="Peppy Paneer">
+                <div class="card-content">
+                    <h3>Peppy Paneer</h3>
+                    <p>Flavorful trio of paneer, capsicum, & red paprika.</p>
+                    <div class="price">₹259</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <div class="bestseller-card">
+                <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/a542d031-5fc8-4902-bbb3-25eebd3ace7e_veggie_paradise_side.webp?ver=V0.0.1"
+                    alt="Veggie Paradise">
+                <div class="card-content">
+                    <h3>Veggie Paradise</h3>
+                    <p>Golden corn, black olives, capsicum & red paprika.</p>
+                    <div class="price">₹259</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <div class="bestseller-card">
+                <img src="https://cdn.jflimages.co.in/nextgen-catalog/media/prod/Dominos/WebHomeProductV1/ff2e39b8-87cc-4f3f-a2f5-06198a85f3df_peppy_paneer_side.webp?ver=V0.0.1"
+                    alt="Veggie Paradise">
+                <div class="card-content">
+                    <h3>Mix Veggie Pizza</h3>
+                    <p>Golden corn, black olives, capsicum & red paprika.</p>
+                    <div class="price">₹259</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <div class="bestseller-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_5OmJe0N2VWUAQq2oDYQ2g6LqPUegey03g&s">
+                <div class="card-content">
+                    <h3>Veg Parcel</h3>
+                    <p>Golden corn, black olives, capsicum & red paprika.</p>
+                    <div class="price">₹259</div>
+                    <button class="add-btn">Add +</button>
+                </div>
+            </div>
+
+            <!-- Add more bestseller cards as needed -->
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DOMPizza | All Rights Reserved</p>
+        <p>Follow us: 🍴 Facebook | 📸 Instagram | 🐦 Twitter</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
